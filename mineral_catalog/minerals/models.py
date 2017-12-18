@@ -27,31 +27,3 @@ class Mineral(models.Model):
 
     def __str__(self):
         return self.name
-
-
-# minerals = json.load(open('minerals.json'))
-
-
-# for mineral in minerals:
-#     Mineral.objects.create(
-#         name=mineral.get('name', ''),
-#         image_filename=mineral.get('image filename', ''),
-#         image_caption=mineral.get('image caption', ''),
-#         category=mineral.get('category', ''),
-#         formula=mineral.get('formula', ''),
-#         strunz_classification=mineral.get('strunz classification', ''),
-#         crystal_system=mineral.get('crystal system', ''),
-#         unit_cell=mineral.get('unit cell', ''),
-#         color=mineral.get('color', ''),
-#         crystal_symmetry=mineral.get('crystal symmetry', ''),
-#         cleavage=mineral.get('cleavage', ''),
-#         mohs_scale_hardness=mineral.get('mohs scale hardness', ''),
-#         luster=mineral.get('luster', ''),
-#         streak=mineral.get('streak', ''),
-#         diaphaneity=mineral.get('diaphaneity', ''),
-#         optical_properties=mineral.get('optical properties', ''),
-#         group=mineral.get('group', ''),
-#         refractive_index=mineral.get('refractive index', ''),
-#         crystal_habit=mineral.get('crystal habit', ''),
-#     )
-
