@@ -1,0 +1,72 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Macky's Minerals: A magnificant catalog of minerals</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+</head>
+<body>
+<div class="bounds bounds--small">
+    <div class="grid-100">
+        <a href="../">
+            <svg class="logo" viewBox="0 0 127.6 84.8" preserveAspectRation="xMinYMin meet">
+                <polygon points="42.7,84.8 49.6,79.4 40,62.5 51.2,43.5 51.2,43.5 25,0 0,55.6 "/>
+                <polygon class="logo--middle" points="52.9,79.5 52.9,79.5 84.8,80.1 59.7,35 43.3,62.4 "/>
+                <polygon points="127.6,61.4 127.6,61.4 110.3,13.5 110.3,13.5 70.3,48.1 70.3,48.1 88.3,80.5 95.3,81.4 95.3,81.4 "></polygon>
+            </svg>
+            <h1 class="logo__name text-centered">Macky's Minerals</h1>
+        </a>
+        <p class="logo__text text-centered">They're not rocks!</p>
+    </div>
+    <div class="grid-100 mineral__container">
+        <h1 class="mineral__name">{{ mineral.name}}</h1>
+        <div class="mineral__image-bg">
+            <img class="mineral__image"
+                 src="{% static 'images/' %}{{ mineral.name }}.jpg">
+            <p class="mineral__caption">{{ mineral.image_caption|title }}</p>
+        </div>
+        <div class="mineral__table-container">
+            <table class="mineral__table">
+                <tr>
+                    <td class="mineral__category">Category</td>
+                    <td>{{ mineral.category|title }}</td>
+                </tr>
+                <tr>
+                    <td class="mineral__category">Formula</td>
+                    <td class="mineral__formula">
+                        {{ mineral.formula|title }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="mineral__category">Strunz Classification</td>
+                    <td>{{ mineral.strunz_classification|title }}</td>
+                </tr>
+                <tr>
+                    <td class="mineral__category">Unit Cell</td>
+                    <td>{{ mineral.unit_cell|title }}</td>
+                </tr>
+                <tr>
+                    <td class="mineral__category">Color</td>
+                    <td>{{ mineral.color|title }}</td>
+                </tr>
+                <tr>
+                    <td class="mineral__category">Crystal Habit</td>
+                    <td>{{ mineral.crystal_habit|title }}</td>
+                </tr>
+                <tr>
+                    <td class="mineral__category">Mohs Scale Hardness</td>
+                    <td>{{ mineral.mohs_scale_hardness|title }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
