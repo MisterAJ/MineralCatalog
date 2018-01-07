@@ -1,8 +1,3 @@
 .vscode
 .DS_Store
-.idea/MineralCatalog.iml
-.idea/codeStyles/
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/workspace.xml
+.idea
