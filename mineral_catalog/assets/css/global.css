@@ -202,3 +202,31 @@ table, p, ul { margin-bottom: 2.5rem; }
 .mineral__table-container { padding: 5px 30px 0; }
 .mineral__category { font-weight: bold; width: 40%; }
 .mineral__formula { font-size: 12px; }
+
+.search_form {
+  margin-bottom: 15px;
+}
+
+.line {
+  height: 2px;
+  border-radius: 2px; 
+  margin: auto auto 25px auto;
+  background-color: #666;
+}
+
+.search {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg {
+  background-color: rgb(220, 230, 223);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.active {
+  font-size: 1.5rem;
+  color: #fff;
+}

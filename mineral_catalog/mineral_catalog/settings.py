@@ -30,14 +30,15 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = ['django.contrib.admin', 
-                  'django.contrib.auth', 
-                  'django.contrib.contenttypes', 
-                  'django.contrib.sessions', 
-                  'django.contrib.messages', 
-                  'django.contrib.staticfiles', 
+INSTALLED_APPS = ['django.contrib.admin',
+                  'django.contrib.auth',
+                  'django.contrib.contenttypes',
+                  'django.contrib.sessions',
+                  'django.contrib.messages',
+                  'django.contrib.staticfiles',
+                  'debug_toolbar',
                   'minerals',
-                  ]
+                 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'mineral_catalog.urls'
@@ -121,3 +123,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
 )
+
+INTERNAL_IPS = ['127.0.0.1', '0.0.0.0']
