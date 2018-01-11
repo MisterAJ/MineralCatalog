@@ -30,6 +30,7 @@ class MineralViewsTests(TestCase):
         self.assertEqual(resp.status_code, 200)
         self.assertContains(resp, self.mineral.name)
 
+
 class MineralFilterTests(TestCase):
     def setUp(self):
         self.mineral = Mineral.objects.create(
@@ -45,5 +46,5 @@ class MineralFilterTests(TestCase):
         self.assertEqual(resp.status_code, 200)
 
     def test_search(self):
-        resp = self.client.post('/search/', {'search':'nyancats'})
+        resp = self.client.post('/search/', {'search': 'nyancats'})
         self.assertEqual(resp.status_code, 200)

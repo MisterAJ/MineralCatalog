@@ -38,7 +38,7 @@ INSTALLED_APPS = ['django.contrib.admin',
                   'django.contrib.staticfiles',
                   'debug_toolbar',
                   'minerals',
-                 ]
+                  ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
