@@ -1,6 +1,6 @@
 import re
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render , get_object_or_404
 
 from .models import Mineral
 
@@ -25,7 +25,7 @@ def mineral_list(request):
 
 def mineral_detail(request, pk):
     """Displays the details of the Mineral"""
-    mineral = Mineral.objects.get(pk=pk)
+    mineral = get_object_or_404(Mineral, pk=pk)
     return render(request, 'minerals/detail.html', {'mineral': mineral})
 
 
